@@ -23,18 +23,21 @@
 }
 
 .header__title {
+  margin: 0;
   z-index: 4;
   margin-left: 64px;
-  width: 730px;
+  max-width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
 }
 
 .header__subtitle {
+  margin: 0;
   position: absolute;
   z-index: 3;
-  width: 388px;
+  max-width: 388px;
+  width: 100%;
   left: 64px;
   bottom: 30px;
   line-height: 25px;
@@ -76,11 +79,11 @@
   width: 80%;
   margin: 0 auto;
   padding-top: 100px;
-  min-height: 300px;
 }
 
 .two-columns__brief {
-  width: 175px;
+  max-width: 175px;
+  width: 100%;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -89,7 +92,8 @@
 }
 
 .two-columns__main-text {
-  width: 80%;
+  max-width: 80%;
+  width: 100%;
   min-width: 784px;
 }
 
@@ -118,7 +122,8 @@
 
 .section-title {
   text-align: center;
-  width: 60%;
+  max-width: 60%;
+  width: 100%;
   margin: 0 auto;
   line-height: 1.15;
   font-size: 60px;
@@ -127,7 +132,8 @@
 
 .section-subtitle {
   text-align: center;
-  width: 60%;
+  max-width: 60%;
+  width: 100%;
   margin: 20px auto 0 auto;
   line-height: 34px;
   font-size: 24px;
@@ -151,7 +157,7 @@
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   margin-top: 0;
 }
 
@@ -167,13 +173,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
 }
 
 .feynman__title { 
   text-align: center;
-  width: 648px;
+  max-width: 648px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 100px;
   line-height: 1.15;
@@ -265,6 +272,8 @@
 }
 
 .footer {
+  display: flex;
+  box-sizing: border-box;
   background-color: #1f1f1f;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -278,7 +287,6 @@
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  height: 330px;
 }
 
 .logo_place_footer {
@@ -287,9 +295,13 @@
   height: 32px;
 }
 
-.footer__column_content_copyright {
+.footer__column{
   display: flex;
   flex-direction: column;
+}
+
+.footer__column_content_copyright {
+  justify-content: space-between;
   align-items: flex-start;
   flex-basis: 711px;
   margin: 0;
@@ -305,7 +317,6 @@
 }
 
 .footer__column_content_info {
-  flex-direction: column;
   align-items: flex-start;
   color: white;
 }
@@ -314,28 +325,26 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
-  margin: auto;
-  margin-top: 0;
+  margin: 0 auto 0 auto;
 }
 
 .footer__column-links {
+  list-style: none;
   margin: 20px 0 16px 0;
+  padding: 0;
   flex-direction: row;
 }
 
 .footer__column-link {
   text-decoration: none;
   color: white;
-  list-style: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   margin: 0;
-  padding: 0;
 }
 
 .footer__column_content_social {
-  flex-direction: column;
   align-items: flex-start;
   color: white;
   margin: 0;
